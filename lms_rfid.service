@@ -1,0 +1,11 @@
+[Unit]
+Description=LMS RFID
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /usr/src/lms_rfid/lms_rfid.py
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
